@@ -23,14 +23,25 @@ echo $0
 ```
 
 - gosstyのインストール
-1. (ghostty)[https://ghostty.org/download]のインストール
+1. [ghostty](https://ghostty.org/download)のインストール
 2. デフォルトのconfigファイルを削除
 ```sh
 rm ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
-# リポジトリのclone
+# リポジトリのclone（新規PCの場合）
 ```sh
 cd ~/
 git clone https://github.com/Yuji-Momotani/.config.git 
 ```
+新規PC出ない場合は、必要なconfigファイルをコピペでOK
+
+# Claude Codeの設定
+1. Ghostty の設定ファイルに desktop-notifications = true を追加
+~/.config/ghostty/config に以下を追加（本リポジトリのconfigファイルをコピーしていたら問題なし）
+```
+desktop-notifications = true
+```
+
+2. macOS の「通知」設定で Ghostty を許可
+- システム設定 → 通知 → アプリ一覧から Ghostty → 「通知を許可」を ON
