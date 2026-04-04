@@ -4,7 +4,7 @@ font-size = 14
 # 行間を少し広げてモダンにする
 adjust-cell-height = 10%
 # フォントファミリー 
-# font-family = "BlexMono Nerd Font Mono"
+font-family = "BlexMono Nerd Font Mono"
 
 # テーマ
 theme = Mariana
@@ -12,38 +12,42 @@ theme = Mariana
 # --- ウィンドウ・透明度 ---
 # 背景を透過させてブラー（すりガラス効果）を入れる
 background-opacity = 0.90
-# background-blur = 20
+background-blur = 20
 
 # デスクトップ通知
 desktop-notifications = true
 
 # ウィンドウ内の余白を入れて圧迫感を減らす
-# window-padding-x = 10
-# window-padding-y = 10
-# window-padding-balance = true
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
+# window full screen
+keybind = cmd+shift+enter=toggle_fullscreen
+
 
 # =========================
 # Appearance 
 # =========================
-# font-size = 16 
-# theme = Tomorrow Night
-# palette = 8=#626880
-# cursor-style = block
-# mouse-hide-while-typing = true
-# window-padding-balance = true
-# window-save-state = always
-# window-colorspace = "display-p3"
+font-size = 16 
+theme = Tomorrow Night
+palette = 8=#626880
+cursor-style = block
+mouse-hide-while-typing = true
+window-padding-balance = true
+window-save-state = always
+window-colorspace = "display-p3"
 
 # =========================
 # Breakline 
 # =========================
-# keybind = shift+enter=text:\x1b\r
+keybind = shift+enter=text:\x1b\r
 
 # =========================
 # Word by word deletion
 # =========================
-# keybind = alt+backspace=text:\x1b\x7f
-# keybind = shift+backspace=text:\x1b\x7f
+keybind = alt+backspace=text:\x1b\x7f
+keybind = shift+backspace=text:\x1b\x7f
 
 # =========================
 # Pane navigation
@@ -60,6 +64,8 @@ keybind = shift+cmd+left=new_split:left
 keybind = shift+cmd+down=new_split:down
 keybind = shift+cmd+up=new_split:up
 keybind = shift+cmd+right=new_split:right
+# 選択中のペインを全画面表示
+keybind = cmd+enter=toggle_split_zoom
 
 # =========================
 # Close pane
