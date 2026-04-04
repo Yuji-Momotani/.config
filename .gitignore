@@ -1,0 +1,6 @@
+# zsh関連のキャッシュファイル等
+zsh/.zcompdump*
+zsh/.zsh_history
+
+# raycastは一旦不要としておく
+raycast

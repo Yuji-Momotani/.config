@@ -1,4 +1,6 @@
 # 初期設定
+
+## 必要ツールのインストール
 - brewのインストール
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -9,6 +11,19 @@
 brew install git
 ```
 
+- treeのインストール
+```sh
+brew install tree
+```
+
+- gosstyのインストール
+1. [ghostty](https://ghostty.org/download)のインストール
+2. デフォルトのconfigファイルを削除
+```sh
+rm ~/Library/Application\ Support/com.mitchellh.ghostty/config
+```
+
+## zshrcのパス変更(~/.config配下にセット)
 - .zshenvの設定
 ```sh
 echo 'export ZDOTDIR=$HOME/.config/zsh' >> ~/.zshenv
@@ -20,13 +35,6 @@ echo $ZDOTDIR
 
 echo $0
 # → -zsh（正常にzshが起動している）
-```
-
-- gosstyのインストール
-1. [ghostty](https://ghostty.org/download)のインストール
-2. デフォルトのconfigファイルを削除
-```sh
-rm ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
 # リポジトリのclone（新規PCの場合）
