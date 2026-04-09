@@ -117,8 +117,10 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
+alias view="nvim -R"
 alias zshconfig="code ~/.config/zsh/.zshrc"
 alias szsh="source ~/.config/zsh/.zshrc"
 alias ohmyzsh="code ~/.config/.oh-my-zsh"
@@ -126,3 +128,9 @@ alias ohmyzsh="code ~/.config/.oh-my-zsh"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="$HOME/.local/bin:$PATH"
+
+
+# pyenvのパス設定
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"

@@ -23,6 +23,35 @@ brew install tree
 rm ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
+- neovimのインストール
+```sh
+brew install neovim
+```
+
+- pythonのインストール
+```sh
+brew install pyenv
+
+# おそらくこれで最新のバージョンがinsatllされる
+pyenv install 3
+
+pyenv global 3.14.3
+
+# 3.14.3が表示されてばOK
+python3 --version
+```
+
+- autojunmのインストール
+```sh
+brew install autojump
+```
+
+- oh my zshのインストール
+https://ohmyz.sh/#install
+
+- vim plugのインストール
+https://github.com/junegunn/vim-plug
+
 ## zshrcのパス変更(~/.config配下にセット)
 - .zshenvの設定
 ```sh
@@ -36,6 +65,7 @@ echo $ZDOTDIR
 echo $0
 # → -zsh（正常にzshが起動している）
 ```
+これにより、~/.zshrc → ~/.config/zsh/.zshrc に場所が変わるため、intall手順でパスを通す場合などに注意すること。（例：`echo 'export HOGEENV=$HOME/.hoge >> ~/.zshrc'` みたいなやつはパスに注意）
 
 ## リポジトリのclone（新規PCの場合）
 ```sh
@@ -57,3 +87,4 @@ desktop-notifications = true
 ## 同期用の設定ファイルの配置
 alfredは同期機能があるため、iCloudに設定ファイルを配置
 - Advanced > Syncing > Set preferences folder からiCloudの「config」ディレクトリを選択
+
