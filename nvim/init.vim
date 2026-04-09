@@ -20,3 +20,5 @@ let g:lightline.colorscheme = 'horizon'
 "nerdtree
 nnoremap <C-e> :NERDTreeToggle<CR>
 
+"vim-gitgutter
+let g:gitgutter_highlight_lines = 1
