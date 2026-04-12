@@ -112,3 +112,10 @@ git clone https://github.com/airblade/vim-gitgutter.git
 nvim -u NONE -c "helptags vim-gitgutter/doc" -c 
 ```
 [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+
+# 要確認
+- ホームディレクトリに`.gitconfig`が存在しないこと。
+    - `~/.gitconfig`
+    - .gitのconfigファイルは、`~/.config/git/config`に配置しているが、ホームディレクトリに`~/.gitconfig`が存在すると、こちらが優先されてしまう。
+
+
