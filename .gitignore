@@ -4,3 +4,9 @@ zsh/.zsh_history
 
 # raycastは一旦不要としておく
 raycast
+
+# coc
+coc
+
+# nvimのバッケージも不要
+nvim/pack

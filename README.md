@@ -88,3 +88,27 @@ desktop-notifications = true
 alfredは同期機能があるため、iCloudに設定ファイルを配置
 - Advanced > Syncing > Set preferences folder からiCloudの「config」ディレクトリを選択
 
+## NeoVim - Go開発環境
+vimを開いてcoc-goをインストール
+```
+:CocInstall coc-go
+```
+
+その後、goplsをインストールすることで補完が効くようになる。
+```
+:CocInstall coc-go
+```
+詳細は以下を参照
+[coc.nvim](https://github.com/neoclide/coc.nvim)
+[coc-go](https://github.com/josa42/coc-go)
+```
+
+## NeoVim - vim-gitgutter
+vim-gitgutterのインストール
+```
+mkdir -p ~/.config/nvim/pack/airblade/start
+cd ~/.config/nvim/pack/airblade/start
+git clone https://github.com/airblade/vim-gitgutter.git
+nvim -u NONE -c "helptags vim-gitgutter/doc" -c 
+```
+[vim-gitgutter](https://github.com/airblade/vim-gitgutter)

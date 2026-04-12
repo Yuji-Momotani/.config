@@ -8,7 +8,8 @@ call plug#begin()
 Plug 'ntk148v/vim-horizon'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 "vim-horizon
@@ -22,3 +23,6 @@ nnoremap <C-e> :NERDTreeToggle<CR>
 
 "vim-gitgutter
 let g:gitgutter_highlight_lines = 1
+
+"coc.nvim
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
