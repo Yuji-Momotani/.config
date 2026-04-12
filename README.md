@@ -41,6 +41,11 @@ pyenv global 3.14.3
 python3 --version
 ```
 
+- goのインストール
+```sh
+brew install go
+```
+
 - autojunmのインストール
 ```sh
 brew install autojump
@@ -51,6 +56,12 @@ https://ohmyz.sh/#install
 
 - vim plugのインストール
 https://github.com/junegunn/vim-plug
+
+- bunのインストール
+```
+curl -fsSL https://bun.com/install | bash
+```
+https://bun.com/docs/installation
 
 ## zshrcのパス変更(~/.config配下にセット)
 - .zshenvの設定

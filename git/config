@@ -11,3 +11,19 @@
         al = config --get-regexp ^alias\\.
         pl = !git pull origin $(git rev-parse --abbrev-ref HEAD)
         psoh = push origin HEAD
+
+		# 指定のワーディングで変更が入ったコミットを抽出（日付付き）
+        # 使い方: git logs "検索文字列" [件数(デフォルト20)]
+        logs = "!f() { git log --all -S\"$1\" --pretty=format:\"%h %ad %s\" --date=short | head -${2:-20}; }; f"
+
+        # 特定のコミットがマージされたPRを表示（PR URLも表示）
+        # 使い方: git pr-url <コミットハッシュ>
+        pr-url = "!f() { \
+                PR=$(git log --all --ancestry-path --reverse $1..HEAD --merges --oneline --pretty=format:\"%s\" | grep -o '#[0-9]\\+' | head -1); \
+                if [ -n \"$PR\" ]; then \
+                        REMOTE=$(git remote get-url origin | sed 's/\\.git$//' | sed 's/git@github\\.com:/https:\\/\\/github.com\\//'); \
+                        echo \"$REMOTE/pull/${PR#\\#}\"; \
+                else \
+                        echo \"PR not found for commit $1\"; \
+                fi; \
+        }; f"
