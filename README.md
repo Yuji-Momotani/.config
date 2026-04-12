@@ -96,12 +96,11 @@ vimを開いてcoc-goをインストール
 
 その後、goplsをインストールすることで補完が効くようになる。
 ```
-:CocInstall coc-go
+:CocCommand go.install.gopls
 ```
 詳細は以下を参照
 [coc.nvim](https://github.com/neoclide/coc.nvim)
 [coc-go](https://github.com/josa42/coc-go)
-```
 
 ## NeoVim - vim-gitgutter
 vim-gitgutterのインストール

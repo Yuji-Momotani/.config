@@ -10,3 +10,8 @@ coc
 
 # nvimのバッケージも不要
 nvim/pack
+
+# とりあえず不要なディレクトリ群(必要になったら追加する)
+configstore
+iterm2
+yarn

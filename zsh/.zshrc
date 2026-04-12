@@ -134,3 +134,8 @@ export PATH="$HOME/.local/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+
+# bun completions
+[ -s "/Users/yuji-momotani/.bun/_bun" ] && source "/Users/yuji-momotani/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun" 
+export PATH="$BUN_INSTALL/bin:$PATH"
