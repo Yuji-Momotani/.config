@@ -15,3 +15,10 @@ nvim/pack
 configstore
 iterm2
 yarn
+
+# lazy
+nvim/lazy-lock.json
+
+# backup
+nvim/init.vim_buckup
+

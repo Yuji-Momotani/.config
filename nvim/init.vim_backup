@@ -19,6 +19,9 @@ let g:lightline = {}
 let g:lightline.colorscheme = 'horizon'
 
 "nerdtree
+let NERDTreeShowHidden = 1
+
+"nerdtree
 nnoremap <C-e> :NERDTreeToggle<CR>
 
 "vim-gitgutter

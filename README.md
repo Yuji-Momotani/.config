@@ -16,16 +16,31 @@ brew install git
 brew install tree
 ```
 
-- gosstyのインストール
+- gosstyのインストール(cmuxを使うなら不要かも？)
 1. [ghostty](https://ghostty.org/download)のインストール
 2. デフォルトのconfigファイルを削除
 ```sh
 rm ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
+- cmuxのインストール
+```
+brew tap manaflow-ai/cmux
+brew install --cask cmux
+
+# シンボリックリンクを貼る
+sudo ln -sf "/Applications/cmux.app/Contents/Resources/bin/cmux" /usr/local/bin/cmux
+```
+https://cmux.com/ja/docs/getting-started
+
 - neovimのインストール
 ```sh
 brew install neovim
+```
+
+- ripgrepのインストール
+```sh
+brew install ripgrep
 ```
 
 - pythonのインストール
