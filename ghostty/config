@@ -39,6 +39,11 @@ window-save-state = always
 window-colorspace = "display-p3"
 
 # =========================
+# macos key 
+# =========================
+macos-option-as-alt = true
+
+# =========================
 # Breakline 
 # =========================
 keybind = shift+enter=text:\x1b\r

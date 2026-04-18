@@ -7,9 +7,14 @@ return {
   },
   keys = {
     { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "TreeToggle" },
-    { "<leader>w", "<cmd>NvimTreeToggle<cr>", desc = "TreeToggle" },
+    -- { "<leader>w", "<cmd>NvimTreeToggle<cr>", desc = "TreeToggle" },
   },
   config = function()
-    require("nvim-tree").setup {}
+    require("nvim-tree").setup {
+      filters = {
+        git_ignored = false,
+        dotfiles = false,
+      },
+    }
   end,
 }

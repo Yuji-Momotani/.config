@@ -121,9 +121,10 @@ alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 alias view="nvim -R"
-alias zshconfig="code ~/.config/zsh/.zshrc"
+alias zshconfig="nvim ~/.config/zsh/.zshrc"
 alias szsh="source ~/.config/zsh/.zshrc"
-alias ohmyzsh="code ~/.config/.oh-my-zsh"
+alias ohmyzsh="nvim ~/.config/.oh-my-zsh"
+alias lzg="lazygit"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

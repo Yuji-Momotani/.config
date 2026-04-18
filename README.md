@@ -43,6 +43,20 @@ brew install neovim
 brew install ripgrep
 ```
 
+- lua-language-serverのインストール
+```sh
+brew install lua-language-server
+```
+- HTML, CSSのLanguageServerをインストール
+```sh
+npm i -g @olrtg/emmet-language-server
+```
+
+- typescript-language-serverのインストール
+```sh
+npm install -g typescript-language-server typescript-language-server
+```
+
 - pythonのインストール
 ```sh
 brew install pyenv
@@ -59,11 +73,18 @@ python3 --version
 - goのインストール
 ```sh
 brew install go
+brew install gopls
+# formatterでgofmtを使用しているが、これは個別インストール不要(goのinstallで含まれる)
 ```
 
 - autojunmのインストール
 ```sh
 brew install autojump
+```
+
+- lazygitのインストール
+```sh
+brew install lazygit
 ```
 
 - oh my zshのインストール
@@ -114,20 +135,6 @@ desktop-notifications = true
 alfredは同期機能があるため、iCloudに設定ファイルを配置
 - Advanced > Syncing > Set preferences folder からiCloudの「config」ディレクトリを選択
 
-## NeoVim - Go開発環境
-vimを開いてcoc-goをインストール
-```
-:CocInstall coc-go
-```
-
-その後、goplsをインストールすることで補完が効くようになる。
-```
-:CocCommand go.install.gopls
-```
-詳細は以下を参照
-[coc.nvim](https://github.com/neoclide/coc.nvim)
-[coc-go](https://github.com/josa42/coc-go)
-
 ## NeoVim - vim-gitgutter
 vim-gitgutterのインストール
 ```
@@ -143,4 +150,8 @@ nvim -u NONE -c "helptags vim-gitgutter/doc" -c
     - `~/.gitconfig`
     - .gitのconfigファイルは、`~/.config/git/config`に配置しているが、ホームディレクトリに`~/.gitconfig`が存在すると、こちらが優先されてしまう。
 
-
+# Copilotの設定
+normalモードで以下のコマンドを実行
+```
+:Copilot setup
+```
