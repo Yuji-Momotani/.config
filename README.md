@@ -117,9 +117,6 @@ brew install lazygit
 - oh my zshのインストール
 https://ohmyz.sh/#install
 
-- vim plugのインストール
-https://github.com/junegunn/vim-plug
-
 - bunのインストール
 ```
 curl -fsSL https://bun.com/install | bash
