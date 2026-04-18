@@ -38,6 +38,11 @@ brew install git
 brew install tree
 ```
 
+- nodeのインストール
+```sh
+brew install node
+```
+
 - gosstyのインストール(cmuxを使うなら不要かも？)
 1. [ghostty](https://ghostty.org/download)のインストール
 2. デフォルトのconfigファイルを削除
