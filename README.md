@@ -147,10 +147,6 @@ desktop-notifications = true
 2. macOS の「通知」設定で Ghostty を許可
 - システム設定 → 通知 → アプリ一覧から Ghostty → 「通知を許可」を ON
 
-## 同期用の設定ファイルの配置
-alfredは同期機能があるため、iCloudに設定ファイルを配置
-- Advanced > Syncing > Set preferences folder からiCloudの「config」ディレクトリを選択
-
 ## NeoVim - vim-gitgutter
 vim-gitgutterのインストール
 ```
