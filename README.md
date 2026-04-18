@@ -24,17 +24,15 @@ echo $0
 
 ## 基本ツール
 - Alfredのインストール
-https://www.alfredapp.com/
-
-Advanced > Syncing > Set preferences folder からiCloudの`config/alfred`ディレクトリを選択
+  - https://www.alfredapp.com/
+  - Advanced > Syncing > Set preferences folder からiCloudの`config/alfred`ディレクトリを選択
 
 - Karabiner-Elementsのインストール
-https://karabiner-elements.pqrs.org/
+  - https://karabiner-elements.pqrs.org/
 
 - Rectangleのインストール
-https://rectangleapp.com/
-
-ショートカット > 次のディスプレイに移動 を `ctrl + cmd + alt + →` に設定(同様に前のディスプレイに移動も設定)
+  - https://rectangleapp.com/
+  - ショートカット > 次のディスプレイに移動 を `ctrl + cmd + alt + →` に設定(同様に前のディスプレイに移動も設定)
 
 ## 開発ツールのインストール
 - brewのインストール
@@ -137,6 +135,28 @@ curl -fsSL https://bun.com/install | bash
 ```
 https://bun.com/docs/installation
 
+- zsh-syntax-highlightingのインストール
+```sh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+- zsh-autosuggestionsのインストール
+```sh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+- fzfのインストール
+```sh
+brew install fzf
+```
+
+- powerlevel10kのインストール
+```sh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+```
+
+
+
 ## Claude Codeの設定
 1. Ghostty の設定ファイルに desktop-notifications = true を追加
 ~/.config/ghostty/config に以下を追加（本リポジトリのconfigファイルをコピーしていたら問題なし）
@@ -147,20 +167,11 @@ desktop-notifications = true
 2. macOS の「通知」設定で Ghostty を許可
 - システム設定 → 通知 → アプリ一覧から Ghostty → 「通知を許可」を ON
 
-## NeoVim - vim-gitgutter
-vim-gitgutterのインストール
-```
-mkdir -p ~/.config/nvim/pack/airblade/start
-cd ~/.config/nvim/pack/airblade/start
-git clone https://github.com/airblade/vim-gitgutter.git
-nvim -u NONE -c "helptags vim-gitgutter/doc" -c 
-```
-[vim-gitgutter](https://github.com/airblade/vim-gitgutter)
-
 # 要確認
 - ホームディレクトリに`.gitconfig`が存在しないこと。
     - `~/.gitconfig`
     - .gitのconfigファイルは、`~/.config/git/config`に配置しているが、ホームディレクトリに`~/.gitconfig`が存在すると、こちらが優先されてしまう。
+- oh-my-zshをinstallすると、
 
 # Copilotの設定
 normalモードで以下のコマンドを実行
