@@ -155,6 +155,11 @@ brew install fzf
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 ```
 
+- ghコマンドインストール + 認証
+```sh
+brew install gh
+gh auth login
+```
 
 
 ## Claude Codeの設定
