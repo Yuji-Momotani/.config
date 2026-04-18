@@ -22,7 +22,21 @@ echo $0
 ```
 これにより、~/.zshrc → ~/.config/zsh/.zshrc に場所が変わるため、intall手順でパスを通す場合などに注意すること。（例：`echo 'export HOGEENV=$HOME/.hoge >> ~/.zshrc'` みたいなやつはパスに注意）
 
-## 必要ツールのインストール
+## 基本ツール
+- Alfredのインストール
+https://www.alfredapp.com/
+
+Advanced > Syncing > Set preferences folder からiCloudの`config/alfred`ディレクトリを選択
+
+- Karabiner-Elementsのインストール
+https://karabiner-elements.pqrs.org/
+
+- Rectangleのインストール
+https://rectangleapp.com/
+
+ショートカット > 次のディスプレイに移動 を `ctrl + cmd + alt + →` に設定(同様に前のディスプレイに移動も設定)
+
+## 開発ツールのインストール
 - brewのインストール
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
