@@ -1,12 +1,34 @@
 # 初期設定
 
+## まずこのリポジトリのclone（新規PCの場合）
+```sh
+cd ~/
+git clone https://github.com/Yuji-Momotani/.config.git 
+```
+新規PCでない場合は、必要なconfigファイルをコピペでOK
+
+## zshrcのパス変更(~/.config配下にセット)
+- .zshenvの設定
+```sh
+echo 'export ZDOTDIR=$HOME/.config/zsh' >> ~/.zshenv
+
+# 動作確認
+# 新しいターミナルを開き以下の通りの結果であればOK
+echo $ZDOTDIR
+# → /Users/yourname/.config/zsh
+
+echo $0
+# → -zsh（正常にzshが起動している）
+```
+これにより、~/.zshrc → ~/.config/zsh/.zshrc に場所が変わるため、intall手順でパスを通す場合などに注意すること。（例：`echo 'export HOGEENV=$HOME/.hoge >> ~/.zshrc'` みたいなやつはパスに注意）
+
 ## 必要ツールのインストール
 - brewのインストール
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-- gitのインストール
+- gitのインストール(たぶんMacならデフォルトで入ってる）
 ```sh
 brew install git
 ```
@@ -98,28 +120,6 @@ https://github.com/junegunn/vim-plug
 curl -fsSL https://bun.com/install | bash
 ```
 https://bun.com/docs/installation
-
-## zshrcのパス変更(~/.config配下にセット)
-- .zshenvの設定
-```sh
-echo 'export ZDOTDIR=$HOME/.config/zsh' >> ~/.zshenv
-
-# 動作確認
-# 新しいターミナルを開き以下の通りの結果であればOK
-echo $ZDOTDIR
-# → /Users/yourname/.config/zsh
-
-echo $0
-# → -zsh（正常にzshが起動している）
-```
-これにより、~/.zshrc → ~/.config/zsh/.zshrc に場所が変わるため、intall手順でパスを通す場合などに注意すること。（例：`echo 'export HOGEENV=$HOME/.hoge >> ~/.zshrc'` みたいなやつはパスに注意）
-
-## リポジトリのclone（新規PCの場合）
-```sh
-cd ~/
-git clone https://github.com/Yuji-Momotani/.config.git 
-```
-新規PC出ない場合は、必要なconfigファイルをコピペでOK
 
 ## Claude Codeの設定
 1. Ghostty の設定ファイルに desktop-notifications = true を追加
