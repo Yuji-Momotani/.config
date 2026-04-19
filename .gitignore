@@ -21,7 +21,7 @@ nvim/lazy-lock.json
 
 # backup
 nvim/init.vim_buckup
-karabiner/automatic_backup
+karabiner/automatic_backups
 
 # zshのセッションファイル
 zsh/.zsh_sessions
