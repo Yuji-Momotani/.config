@@ -40,6 +40,6 @@ return {
     map('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', opts)
 
     -- close
-    map('n', '<A-d>', '<Cmd>BufferClose<CR>', opts)
+    map('n', '<A-x>', '<Cmd>BufferClose<CR>', opts)
   end
 }
