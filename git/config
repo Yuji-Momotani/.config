@@ -28,4 +28,7 @@
                 fi; \
         }; f"
 [user]
-	email = kilroy.was.here1016@gmail.com
+	; emailはリポジトリごとに設定する。(git config user.email "")
+	; email = kilroy.was.here1016@gmail.com
+	; email = yuji.momotani256@gmail.com
+	name = Yuji-Momotani
