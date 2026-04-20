@@ -27,3 +27,5 @@
                         echo \"PR not found for commit $1\"; \
                 fi; \
         }; f"
+[user]
+	email = kilroy.was.here1016@gmail.com
