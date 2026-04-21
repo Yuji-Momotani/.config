@@ -125,6 +125,7 @@ alias zshconfig="nvim ~/.config/zsh/.zshrc"
 alias szsh="source ~/.config/zsh/.zshrc"
 alias ohmyzsh="nvim ~/.config/.oh-my-zsh"
 alias lzg="lazygit"
+alias sb="supabase"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -138,7 +139,7 @@ eval "$(pyenv init - zsh)"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-export BUN_INSTALL="$HOME/.bun" 
+export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.

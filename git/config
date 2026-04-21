@@ -6,6 +6,7 @@
         st = status
         cm = commit
         co = checkout
+        cob = checkout -b
         sw = switch
         br = branch
         al = config --get-regexp ^alias\\.
