@@ -12,6 +12,9 @@
         al = config --get-regexp ^alias\\.
         pl = !git pull origin $(git rev-parse --abbrev-ref HEAD)
         psoh = push origin HEAD
+        brd = git branch -d
+        # 現在いるブランチ以外のローカルブランチを削除
+        brad = git branch | xargs git branch -d
 
 		# 指定のワーディングで変更が入ったコミットを抽出（日付付き）
         # 使い方: git logs "検索文字列" [件数(デフォルト20)]
