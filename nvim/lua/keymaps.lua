@@ -38,3 +38,7 @@ map('v', '<C-a>', '^', { noremap = true , silent = true})
 
 -- all select
 map("n", "<Leader>a", "gg<S-v>G", { noremap = true })
+
+-- copy file path to clipboard
+map('n', '<Leader>cp', ':let @+ = expand("%") | echo "Copied: " . expand("%")<CR>', { noremap = true, silent = false })
+map('n', '<Leader>cP', ':let @+ = expand("%:p") | echo "Copied: " . expand("%:p")<CR>', { noremap = true, silent = false })
