@@ -187,3 +187,7 @@ normalモードで以下のコマンドを実行
 ```
 :Copilot setup
 ```
+
+## vscodeの設定
+vscodeの設定は、同期機能を使用。以下記事の2台目のPCでの手順を参照。
+https://zenn.dev/longbridge/articles/0811abc01d10cc#%E7%B6%9A%E3%81%84%E3%81%A6%E5%90%8C%E6%9C%9F%E5%85%88%E3%81%A8%E3%81%AA%E3%82%8B2%E5%8F%B0%E7%9B%AE%E3%81%AEpc%E3%81%A7%E3%82%82%E5%90%8C%E6%9C%9F%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%82%92%E8%A1%8C%E3%81%84%E3%81%BE%E3%81%99%E3%80%82
