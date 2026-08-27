@@ -36,3 +36,5 @@
 	; email = kilroy.was.here1016@gmail.com
 	; email = yuji.momotani256@gmail.com
 	name = Yuji-Momotani
+[core]
+	editor = code --wait
