@@ -30,3 +30,6 @@ zsh/.zsh_sessions
 github-copilot
 
 cagent
+
+# ブロードエッジ案件特有のCLI設定
+bew
