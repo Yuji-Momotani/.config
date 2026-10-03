@@ -134,7 +134,7 @@ alias localignore="cursor .git/info/exclude" # 対象プロジェクト直下で
 alias copy="tee >(pbcopy)"
 alias dcou="docker compose up"
 alias dcod="docker compose down"
-alias dcod="docker compose build"
+alias dcob="docker compose build"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
