@@ -235,6 +235,9 @@ https://zenn.dev/longbridge/articles/0811abc01d10cc#%E7%B6%9A%E3%81%84%E3%81%A6%
 ショートカットの設定同期
 
 ```sh
+mv "$HOME/Library/Application Support/Cursor/User/keybindings.json" \
+  "$HOME/Library/Application Support/Cursor/User/keybindings.json.bak"
+
 cd "$HOME/Library/Application Support/Cursor/User"
 ln -s ../../../../.config/cursor/keybindings.json keybindings.json
 ```
