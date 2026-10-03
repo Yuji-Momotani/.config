@@ -131,6 +131,7 @@ alias tfi="terraform init"
 alias tfp="terraform plan"
 alias asl="aws sso login"
 alias localignore="cursor .git/info/exclude" # 対象プロジェクト直下で実行すること
+alias copy="tee >(pbcopy)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
