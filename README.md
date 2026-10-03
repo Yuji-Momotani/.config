@@ -239,5 +239,5 @@ mv "$HOME/Library/Application Support/Cursor/User/keybindings.json" \
   "$HOME/Library/Application Support/Cursor/User/keybindings.json.bak"
 
 cd "$HOME/Library/Application Support/Cursor/User"
-ln -s ../../../../.config/cursor/keybindings.json keybindings.json
+ln -s ~/.config/cursor/keybindings.json keybindings.json
 ```
