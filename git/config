@@ -15,8 +15,9 @@
         bd = branch -d
         # 現在いるブランチ以外のローカルブランチを削除
         bad = !git branch | xargs git branch -d
+        cb = "!f() { git branch --show-current | tr -d '\n' | pbcopy; echo 'Current branch name copied to clipboard.'; }; f"
 
-		# 指定のワーディングで変更が入ったコミットを抽出（日付付き）
+        # 指定のワーディングで変更が入ったコミットを抽出（日付付き）
         # 使い方: git logs "検索文字列" [件数(デフォルト20)]
         logs = "!f() { git log --all -S\"$1\" --pretty=format:\"%h %ad %s\" --date=short | head -${2:-20}; }; f"
 
@@ -36,11 +37,23 @@
         signingkey = ~/.ssh/id_ed25519.pub
 	email = yuji.momotani256@gmail.com
 [core]
-	editor = code --wait
-
+	editor = cursor --wait
 [gpg]
         format = ssh
 [gpg "ssh"]
+        # 参考記事（ただし、記事の方はファイル名を間違えているため注意）
+        # https://qiita.com/haw_ohnuma/items/51fa84449bc4a1393846
         allowedSignersFile = ~/.ssh/allowed_signers
 [commit]
         gpgsign = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential

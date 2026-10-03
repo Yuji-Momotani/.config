@@ -126,6 +126,11 @@ alias szsh="source ~/.config/zsh/.zshrc"
 alias ohmyzsh="nvim ~/.config/.oh-my-zsh"
 alias lzg="lazygit"
 alias sb="supabase"
+alias tf="terraform"
+alias tfi="terraform init"
+alias tfp="terraform plan"
+alias asl="aws sso login"
+alias localignore="cursor .git/info/exclude" # 対象プロジェクト直下で実行すること
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -148,3 +153,5 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+export PATH="/opt/homebrew/opt/node@24/bin:$PATH"
