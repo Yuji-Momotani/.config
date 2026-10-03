@@ -1,0 +1,196 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor",
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor",
+  },
+  {
+    "key": "cmd+down",
+    "command": "-workbench.action.terminal.focus",
+    "when": "accessibilityModeEnabled && accessibleViewOnLastLine && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewOnLastLine && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'",
+  },
+  {
+    "key": "cmd+1",
+    "command": "-workbench.action.focusFirstEditorGroup",
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.focusActiveEditorGroup",
+  },
+  {
+    "key": "cmd+2",
+    "command": "-workbench.action.focusSecondEditorGroup",
+  },
+  {
+    "key": "cmd+2",
+    "command": "workbench.action.terminal.focus",
+  },
+  {
+    "key": "shift+cmd+n",
+    "command": "explorer.newFile",
+  },
+  {
+    "key": "alt+cmd+n",
+    "command": "explorer.newFolder",
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\\\r\n",
+    },
+    "when": "terminalFocus",
+  },
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.navigateBack",
+    "when": "canNavigateBack",
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.navigateForward",
+    "when": "canNavigateForward",
+  },
+  {
+    "key": "ctrl+b g",
+    "command": "workbench.view.extension.github-pull-requests",
+  },
+  {
+    "key": "ctrl+b m",
+    "command": "workbench.view.extension.project-manager",
+  },
+  {
+    "key": "ctrl+' i",
+    "command": "workbench.view.extension.mcp--inspector",
+  },
+  {
+    "key": "ctrl+b c",
+    "command": "copyRelativeFilePath",
+    "when": "editorFocus",
+  },
+  {
+    "key": "shift+alt+cmd+c",
+    "command": "-copyRelativeFilePath",
+    "when": "!editorFocus",
+  },
+  {
+    "key": "ctrl+g shift+c",
+    "command": "copyFilePath",
+    "when": "editorFocus",
+  },
+  {
+    "key": "alt+cmd+c",
+    "command": "-copyFilePath",
+    "when": "!editorFocus",
+  },
+  {
+    "key": "cmd+k alt+cmd+c",
+    "command": "-copyFilePath",
+    "when": "editorFocus",
+  },
+  {
+    "key": "cmd+k shift+alt+cmd+c",
+    "command": "-copyRelativeFilePath",
+    "when": "editorFocus",
+  },
+  {
+    "key": "ctrl+b k",
+    "command": "workbench.action.focusAboveGroup",
+  },
+  {
+    "key": "cmd+k cmd+up",
+    "command": "-workbench.action.focusAboveGroup",
+  },
+  {
+    "key": "ctrl+b j",
+    "command": "workbench.action.focusBelowGroup",
+  },
+  {
+    "key": "cmd+k cmd+down",
+    "command": "-workbench.action.focusBelowGroup",
+  },
+  {
+    "key": "ctrl+b ,",
+    "command": "workbench.action.openSettingsJson",
+  },
+  {
+    "key": "ctrl+b shift+;",
+    "command": "workbench.action.gotoLine",
+  },
+  {
+    "key": "ctrl+g",
+    "command": "-workbench.action.gotoLine",
+  },
+  {
+    "key": "ctrl+b shift+,",
+    "command": "workbench.action.openGlobalKeybindings",
+  },
+  {
+    "key": "cmd+k cmd+s",
+    "command": "-workbench.action.openGlobalKeybindings",
+  },
+  {
+    "key": "ctrl+b cmd+c",
+    "command": "github.copilot.toggle.enable",
+  },
+  {
+    "key": "cmd+k right",
+    "command": "workbench.action.moveActiveEditorGroupRight",
+  },
+  {
+    "key": "cmd+k right",
+    "command": "-workbench.action.moveActiveEditorGroupRight",
+  },
+  {
+    "key": "cmd+k left",
+    "command": "-workbench.action.moveActiveEditorGroupLeft",
+  },
+  {
+    "key": "ctrl+b left",
+    "command": "workbench.action.moveEditorLeftInGroup",
+  },
+  {
+    "key": "cmd+k shift+cmd+left",
+    "command": "-workbench.action.moveEditorLeftInGroup",
+  },
+  {
+    "key": "ctrl+b right",
+    "command": "workbench.action.moveEditorRightInGroup",
+  },
+  {
+    "key": "cmd+k shift+cmd+right",
+    "command": "-workbench.action.moveEditorRightInGroup",
+  },
+  {
+    "key": "ctrl+b shift+cmd+h",
+    "command": "workbench.action.moveEditorToLeftGroup",
+  },
+  {
+    "key": "ctrl+b shift+cmd+l",
+    "command": "workbench.action.moveEditorToRightGroup",
+  },
+  {
+    "key": "ctrl+b h",
+    "command": "workbench.action.focusLeftGroup",
+  },
+  {
+    "key": "cmd+k cmd+left",
+    "command": "-workbench.action.focusLeftGroup",
+  },
+  {
+    "key": "ctrl+b l",
+    "command": "workbench.action.focusRightGroup",
+  },
+  {
+    "key": "cmd+k cmd+right",
+    "command": "-workbench.action.focusRightGroup",
+  },
+  {
+    "key": "cmd+k enter",
+    "command": "workbench.action.keepEditor",
+  },
+]
