@@ -15,6 +15,9 @@ nvim/pack
 configstore
 iterm2
 yarn
+tfenv
+uv
+alfred-dock-switcher
 
 # lazy
 nvim/lazy-lock.json
@@ -33,3 +36,6 @@ cagent
 
 # ブロードエッジ案件特有のCLI設定
 bew
+
+# google cloud cli
+gcloud
