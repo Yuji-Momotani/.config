@@ -1,14 +1,18 @@
 # 初期設定
 
 ## まずこのリポジトリのclone（新規PCの場合）
+
 ```sh
 cd ~/
-git clone https://github.com/Yuji-Momotani/.config.git 
+git clone https://github.com/Yuji-Momotani/.config.git
 ```
+
 新規PCでない場合は、必要なconfigファイルをコピペでOK
 
 ## zshrcのパス変更(~/.config配下にセット)
+
 - .zshenvの設定
+
 ```sh
 echo 'export ZDOTDIR=$HOME/.config/zsh' >> ~/.zshenv
 
@@ -20,9 +24,11 @@ echo $ZDOTDIR
 echo $0
 # → -zsh（正常にzshが起動している）
 ```
+
 これにより、~/.zshrc → ~/.config/zsh/.zshrc に場所が変わるため、intall手順でパスを通す場合などに注意すること。（例：`echo 'export HOGEENV=$HOME/.hoge >> ~/.zshrc'` みたいなやつはパスに注意）
 
 ## 基本ツール
+
 - Alfredのインストール
   - https://www.alfredapp.com/
   - Advanced > Syncing > Set preferences folder からiCloudの`config/alfred`ディレクトリを選択
@@ -35,34 +41,42 @@ echo $0
   - ショートカット > 次のディスプレイに移動 を `ctrl + cmd + alt + →` に設定(同様に前のディスプレイに移動も設定)
 
 ## 開発ツールのインストール
+
 - brewのインストール
+
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 - gitのインストール(たぶんMacならデフォルトで入ってる）
+
 ```sh
 brew install git
 ```
 
 - treeのインストール
+
 ```sh
 brew install tree
 ```
 
 - nodeのインストール
+
 ```sh
 brew install node
 ```
 
 - gosstyのインストール(cmuxを使うなら不要かも？)
+
 1. [ghostty](https://ghostty.org/download)のインストール
 2. デフォルトのconfigファイルを削除
+
 ```sh
 rm ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
 - cmuxのインストール
+
 ```
 brew tap manaflow-ai/cmux
 brew install --cask cmux
@@ -70,33 +84,41 @@ brew install --cask cmux
 # シンボリックリンクを貼る
 sudo ln -sf "/Applications/cmux.app/Contents/Resources/bin/cmux" /usr/local/bin/cmux
 ```
+
 https://cmux.com/ja/docs/getting-started
 
 - neovimのインストール
+
 ```sh
 brew install neovim
 ```
 
 - ripgrepのインストール
+
 ```sh
 brew install ripgrep
 ```
 
 - lua-language-serverのインストール
+
 ```sh
 brew install lua-language-server
 ```
+
 - HTML, CSSのLanguageServerをインストール
+
 ```sh
 npm i -g @olrtg/emmet-language-server
 ```
 
 - typescript-language-serverのインストール
+
 ```sh
 npm install -g typescript-language-server typescript-language-server
 ```
 
 - pythonのインストール
+
 ```sh
 brew install pyenv
 
@@ -110,6 +132,7 @@ python3 --version
 ```
 
 - goのインストール
+
 ```sh
 brew install go
 brew install gopls
@@ -117,78 +140,101 @@ brew install gopls
 ```
 
 - autojunmのインストール
+
 ```sh
 brew install autojump
 ```
 
 - lazygitのインストール
+
 ```sh
 brew install lazygit
 ```
 
 - oh my zshのインストール
-https://ohmyz.sh/#install
+  https://ohmyz.sh/#install
 
 - bunのインストール
+
 ```
 curl -fsSL https://bun.com/install | bash
 ```
+
 https://bun.com/docs/installation
 
 - zsh-syntax-highlightingのインストール
+
 ```sh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 - zsh-autosuggestionsのインストール
+
 ```sh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 - fzf, fdのインストール
+
 ```sh
 brew install fzf
 brew install fd
 ```
 
 - powerlevel10kのインストール
+
 ```sh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 ```
 
 - ghコマンドインストール + GitHub認証
+
 ```sh
 brew install gh
 gh auth login
 ```
 
 - ngrokインストール
-https://dashboard.ngrok.com/get-started/setup/macos
-
-
+  https://dashboard.ngrok.com/get-started/setup/macos
 
 ## Claude Codeの設定
+
 1. Ghostty の設定ファイルに desktop-notifications = true を追加
-~/.config/ghostty/config に以下を追加（本リポジトリのconfigファイルをコピーしていたら問題なし）
+   ~/.config/ghostty/config に以下を追加（本リポジトリのconfigファイルをコピーしていたら問題なし）
+
 ```
 desktop-notifications = true
 ```
 
 2. macOS の「通知」設定で Ghostty を許可
+
 - システム設定 → 通知 → アプリ一覧から Ghostty → 「通知を許可」を ON
 
 # 要確認
+
 - ホームディレクトリに`.gitconfig`が存在しないこと。
-    - `~/.gitconfig`
-    - .gitのconfigファイルは、`~/.config/git/config`に配置しているが、ホームディレクトリに`~/.gitconfig`が存在すると、こちらが優先されてしまう。
+  - `~/.gitconfig`
+  - .gitのconfigファイルは、`~/.config/git/config`に配置しているが、ホームディレクトリに`~/.gitconfig`が存在すると、こちらが優先されてしまう。
 - oh-my-zshをinstallすると、
 
 # Copilotの設定
+
 normalモードで以下のコマンドを実行
+
 ```
 :Copilot setup
 ```
 
 ## vscodeの設定
+
 vscodeの設定は、同期機能を使用。以下記事の2台目のPCでの手順を参照。
 https://zenn.dev/longbridge/articles/0811abc01d10cc#%E7%B6%9A%E3%81%84%E3%81%A6%E5%90%8C%E6%9C%9F%E5%85%88%E3%81%A8%E3%81%AA%E3%82%8B2%E5%8F%B0%E7%9B%AE%E3%81%AEpc%E3%81%A7%E3%82%82%E5%90%8C%E6%9C%9F%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%82%92%E8%A1%8C%E3%81%84%E3%81%BE%E3%81%99%E3%80%82
+
+## cursorの設定
+
+ショートカットの設定同期
+
+```sh
+cd "$HOME/Library/Application Support/Cursor/User"
+ln -s ~/.config/cursor/keybindings.json keybindings.json
+```
