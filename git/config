@@ -32,9 +32,15 @@
                 fi; \
         }; f"
 [user]
-	; emailはリポジトリごとに設定する。(git config user.email "")
-	; email = kilroy.was.here1016@gmail.com
-	; email = yuji.momotani256@gmail.com
 	name = Yuji-Momotani
+        signingkey = ~/.ssh/id_ed25519.pub
+	email = yuji.momotani256@gmail.com
 [core]
 	editor = code --wait
+
+[gpg]
+        format = ssh
+[gpg "ssh"]
+        allowedSignersFile = ~/.ssh/allowed_signers
+[commit]
+        gpgsign = true
